@@ -7,7 +7,7 @@ function Noticias() {
           <div>
           <img src={logo} className="App-logo" alt="logo" />
         <p>Noticia 1</p>
-
+<a href="https://www.un.org/es/climatechange/cop26">Mayor Información</a>
           </div>
         
           <div>
@@ -30,11 +30,6 @@ function Noticias() {
           </div>
 
 
-          <div>
-          <img src={logo} className="App-logo" alt="logo" />
-        <p>integrante 5</p>
-
-          </div>
       </div>
     );
   }
