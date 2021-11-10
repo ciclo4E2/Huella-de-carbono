@@ -2,8 +2,33 @@
   text-align: center;
 }
 
+.Integrantes {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  font-size: calc(10px + 2vmin);
+  color: rgb(218, 212, 160);
+}
+
+nav{
+  width: 600px;
+  max-width: 100%;
+}
+
+ul {
+  display: flex;
+  justify-content: space-evenly;
+  
+  padding: 0;
+}
+
+ul li {
+  list-style: none;
+}
+
 .App-logo {
-  height: 40vmin;
+  height: 20vmin;
   pointer-events: none;
 }
 
@@ -15,9 +40,9 @@
 
 .App-header {
   background-color: #282c34;
-  min-height: 100vh;
+  min-height: 30vh;
   display: flex;
-  flex-direction: column;
+  flex-direction: row;
   align-items: center;
   justify-content: center;
   font-size: calc(10px + 2vmin);
