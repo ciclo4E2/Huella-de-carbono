@@ -1,55 +1,68 @@
-import logo from './logo.svg';
+import logo from './imagenes/logo.png';
 import './App.css';
 import React from 'react';
+
 import {
   BrowserRouter as Router,
   Routes,
   Route,
   Link,
   
+
 } from "react-router-dom";
+
+
 import Integrantes from '../src/componentes/integrantes';
 import Servicios from '../src/componentes/servicios';
 import Noticias from '../src/componentes/noticias';
-
+import Registro from '../src/componentes/registro';
 
 function App() {
+  // const navigate = useNavigate();
+
   return (
-    <div className="Apps">
+    <Router className='navegacion'>
+    <div className="App">
       <header className='App-header'>
-      <img src={logo} className="App-logo" alt="logo" />
+        <img src={logo} className="logo" alt="logo" />
         <h2>Huella de carbono</h2>
+        <div>
+          <Link to='/registro' className='btn' id='registro'>Registro</Link>
+          <button className='btn' id='ingreso'>Ingreso</button>
+        </div>
       </header>
-    
-    <Router>
-    <div>
-      <nav>
-        <ul>
-          <li>
-            <Link to="/">Servicios</Link>
-          </li>
-          <li>
-            <Link to="/noticias">Noticias</Link>
-          </li>
-          <li>
-            <Link to="/integrantes">Integrantes</Link>
-          </li>
-                      
-        </ul>
-      </nav>
-      </div>
-      <Routes>
-        
-        <Route exact path="/" element={<Servicios/>} />
-        <Route exact path="/noticias" element={<Noticias/>} />
-        <Route exact path="/integrantes" element={<Integrantes/>} />
-        
-      </Routes>
-    
-  </Router>
-    
-    
+
+      
+        <div>
+          <nav>
+            <ul>
+              <li>
+                <Link to="/">Servicios</Link>
+              </li>
+              <li>
+                <Link to="/noticias">Noticias</Link>
+              </li>
+              <li>
+                <Link to="/integrantes">Integrantes</Link>
+              </li>
+
+            </ul>
+          </nav>
+        </div>
+        <Routes>
+
+          <Route exact path="/" element={<Servicios />} />
+          <Route  path="/noticias" element={<Noticias />} />
+          <Route  path="/integrantes" element={<Integrantes />} />
+          <Route  path="/registro" element={<Registro/>} />
+
+        </Routes>
+
+      
+
+
     </div>
+    </Router>
   );
 }
 

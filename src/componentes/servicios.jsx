@@ -3,7 +3,7 @@ import '../App.css';
 
 function Servicios() {
     return (
-      <div className="Integrantes">
+      <div className="componente">
           <div>
           <img src={logo} className="App-logo" alt="logo" />
         <p>servico 1</p>
