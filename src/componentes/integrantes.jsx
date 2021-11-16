@@ -3,7 +3,7 @@ import '../App.css';
 
 function Integrantes() {
     return (
-      <div className="Integrantes">
+      <div className="componente">
           <div>
           <img src={logo} className="App-logo" alt="logo" />
         <p>integrante 1</p>
