@@ -6,16 +6,17 @@ function Noticias() {
       <div className="componente">
           <div>
           <img src={logo} className="App-logo" alt="logo" />
-        <p>Noticia 1</p>
-<a href="https://www.un.org/es/climatechange/cop26">Glasgow 2021</a>
-<p>Cambio Climático</p>
+        <p><a href="https://www.un.org/es/climatechange/cop26">Glasgow 2021</a></p>
+
+
+<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Magnam expedita atque inventore incidunt amet vero explicabo alias delectus voluptatum aperiam!</p>
           </div>
         
           <div>
           <img src={logo} className="App-logo" alt="logo" />
-        <p>Noticia 2</p>
-        <a href="https://news.un.org/es/story/2020/12/1485312">CO2 Emisiones</a>
-<p>Record</p>
+        <p><a href="https://news.un.org/es/story/2020/12/1485312">CO2 Emisiones</a></p>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatibus sint in dolores saepe ducimus facere omnis, dolore corrupti reprehenderit ut!</p>
+
           </div>
 
           <div>
