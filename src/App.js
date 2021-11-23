@@ -16,6 +16,7 @@ import Integrantes from '../src/componentes/integrantes';
 import Servicios from '../src/componentes/servicios';
 import Noticias from '../src/componentes/noticias';
 import Registro from '../src/componentes/registro';
+import Ingreso from '../src/componentes/ingreso'
 
 function App() {
   // const navigate = useNavigate();
@@ -28,7 +29,8 @@ function App() {
         <h2>Huella de carbono</h2>
         <div>
           <Link to='/registro' className='btn' id='registro'>Registro</Link>
-          <button className='btn' id='ingreso'>Ingreso</button>
+          <Link to='/ingreso' className='btn' id='ingreso'>Ingreso</Link>
+          
         </div>
       </header>
 
@@ -55,6 +57,7 @@ function App() {
           <Route  path="/noticias" element={<Noticias />} />
           <Route  path="/integrantes" element={<Integrantes />} />
           <Route  path="/registro" element={<Registro/>} />
+          <Route  path="/ingreso" element={<Ingreso/>} />
 
         </Routes>
 
