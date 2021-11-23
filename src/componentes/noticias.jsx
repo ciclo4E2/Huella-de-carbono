@@ -9,7 +9,7 @@ function Noticias() {
         <p><a href="https://www.un.org/es/climatechange/cop26">Glasgow 2021</a></p>
 
 
-<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Magnam expedita atque inventore incidunt amet vero explicabo alias delectus voluptatum aperiam!</p>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Magnam expedita atque inventore incidunt amet vero explicabo alias delectus voluptatum aperiam!</p>
           </div>
         
           <div>

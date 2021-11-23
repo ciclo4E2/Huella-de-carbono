@@ -2,7 +2,10 @@
 const {Schema, model} = require('mongoose');
 const datoschema = new Schema({
     // nombre:{type: String, require: true},
-    nombre: String,
+    nombres: String,
+    apellido: String,
+    ciudad: String,
+    profesion: String,
     contraseña: String
 });
 

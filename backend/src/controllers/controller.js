@@ -9,9 +9,12 @@ registroCtrl.getRegistros = async (req,res) =>{
 }
 
 registroCtrl.createRegistro = async (req,res) =>{
-    const {nombre, contraseña} = req.body;
+    const {nombres, apellido, ciudad, profesion, contraseña} = req.body;
     const newRegistro = new Registro({
-        nombre,
+        nombres,
+        apellido,
+        ciudad,
+        profesion,
         contraseña
     });
     await newRegistro.save();
@@ -19,4 +22,21 @@ registroCtrl.createRegistro = async (req,res) =>{
     
 }
 
+registroCtrl.getRegistro = async(req, res)=>{
+    const dato = await Registro.findById(req.params.id)
+    res.json(dato)
+}
+
+registroCtrl.deleteRegistro = async(req, res)=>{
+    await Registro.findByIdAndDelete(req.params.id)
+    res.json('articulo eliminado')
+}
+
+registroCtrl.updateRegistro = async(req, res)=>{
+    const {nombres, apellido, ciudad, profesion, contraseña} = req.body
+    await Registro.findByIdAndUpdate(req.params.id, {nombres, apellido, ciudad, profesion, contraseña})
+    res.json('Registro actualizado')
+}
+
 module.exports = registroCtrl;
+
