@@ -78,3 +78,14 @@ ul li {
   color: rgb(14, 13, 12);
 }
 
+a{
+  text-decoration: none;
+}
+
+section {
+  width: 75%;
+  margin: 0 auto;
+  display:flex;
+}
+
+

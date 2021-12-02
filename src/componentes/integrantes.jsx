@@ -3,37 +3,25 @@ import '../App.css';
 
 function Integrantes() {
     return (
-      <div className="componente">
+        <div className="componente">
           <div>
-          <img src={logo} className="App-logo" alt="logo" />
-        <p>integrante 1</p>
-
+            <img src={logo} className="App-logo" alt="logo" />
+            <h4>Melanie Garcia </h4>
           </div>
         
           <div>
-          <img src={logo} className="App-logo" alt="logo" />
-        <p>integrante 2</p>
-
+            <img src={logo} className="App-logo" alt="logo" />
+            <h4>Daniel Rivera</h4>
           </div>
 
           <div>
-          <img src={logo} className="App-logo" alt="logo" />
-        <p>integrante 3</p>
-
+            <img src={logo} className="App-logo" alt="logo" />
+            <h4>Yuder Hernandez</h4>
           </div>
 
-
           <div>
-          <img src={logo} className="App-logo" alt="logo" />
-        <p>integrante 4</p>
-
-          </div>
-
-
-          <div>
-          <img src={logo} className="App-logo" alt="logo" />
-        <p>integrante 5</p>
-
+              <img src={logo} className="App-logo" alt="logo" />
+              <h4>Yesid Moreno</h4>
           </div>
       </div>
     );
