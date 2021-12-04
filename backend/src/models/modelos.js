@@ -5,7 +5,7 @@ const datoschema = new Schema({
     nombres: String,
     apellido: String,
     ciudad: String,
-    profesion: String,
+    email: String,
     contraseña: String
 });
 

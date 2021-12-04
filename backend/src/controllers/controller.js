@@ -9,16 +9,16 @@ registroCtrl.getRegistros = async (req,res) =>{
 }
 
 registroCtrl.createRegistro = async (req,res) =>{
-    const {nombres, apellido, ciudad, profesion, contraseña} = req.body;
+    const {nombres, apellido, ciudad, email, contraseña} = req.body;
     const newRegistro = new Registro({
         nombres,
         apellido,
         ciudad,
-        profesion,
+        email,
         contraseña
     });
     await newRegistro.save();
-    res.json('registro guardado')
+    res.json(newRegistro)
     
 }
 
