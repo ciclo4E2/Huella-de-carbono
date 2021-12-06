@@ -23,33 +23,10 @@ export default class Ingreso extends Component {
         
     }
 
-    onSubmit = async e => {
+    onSubmit = async (e) => {
         await
         e.preventDefault();
         
-        // axios.post('http://localhost:4000/api/calc/', autenticacion)
-        // .then(res => console.log(res.data));
-
-        //     const newRegistros = {
-        //       nombres: this.state.nombres,
-        //       apellido: this.state.apellido,
-        //       ciudad: this.state.ciudad,
-        //       email: this.state.email,
-        //       contraseña: this.state.contraseña
-        //       };
-
-        //     console.log(newRegistros);
-        //     axios.post('http://localhost:4000/api/calc', newRegistros)
-        //    .then(res => console.log(res.data));
-
-        // this.setState({
-        // nombres: '',
-        // apellido: '',
-        // ciudad: '',
-        // email: '',
-        // contraseña: ''
-        //   })
-
         axios.get('http://localhost:4000/api/calc/')
             .then(response => {
                 this.setState({ registrados: response.data });
@@ -59,11 +36,11 @@ export default class Ingreso extends Component {
             })
         
         this.state.registrados.forEach(element => 
-            this.state.usuario===element.email? this.setState({ user_encontrado: true }): console.log(element.email));
+            this.state.usuario===element.email? this.setState({ user_encontrado: true }): console.log('no encontrado'));
             
         
         this.state.registrados.forEach(element2 => 
-            this.state.password===element2.contraseña? this.setState({ pass_encontrado: true }): console.log(element2.contraseña));
+            this.state.password===element2.contrasena? this.setState({ pass_encontrado: true }): console.log('password no valido'));
         if (this.state.pass_encontrado && this.state.user_encontrado) {
             console.log('usuario ingresado')
             localStorage.setItem('user', 'Juan');
