@@ -1,6 +1,8 @@
 import "bootstrap/dist/css/bootstrap.min.css";
 import React, { Component } from 'react';
 import axios from 'axios';
+// import { Link } from "react-router-dom";
+
 
 export default class Registro extends Component {
   constructor(props) {
@@ -10,48 +12,38 @@ export default class Registro extends Component {
       apellido: '',
       ciudad: '',
       email: '',
-      contraseña: ''
-
+      contrasena: '',
+      // registrados: {nombres: 'aaa',
+      // apellido: 'bbb',
+      // ciudad: 'ccc',
+      // email: 'ddd',
+      // contraseña: 'eee'}
+      registrados: []
     };
-    this.state = { registrados: [] };
-
-
+    
     this.handle_nombres = this.handle_nombres.bind(this);
     this.handle_apellido = this.handle_apellido.bind(this);
     this.handle_ciudad = this.handle_ciudad.bind(this);
     this.handle_email = this.handle_email.bind(this);
     this.handle_password = this.handle_password.bind(this);
     this.onSubmit = this.onSubmit.bind(this);
-  }
-  componentDidMount() {
-    axios.get('http://localhost:4000/api/calc/')
-      .then(response => {
-        this.setState({ registrados: response.data });
-      })
-      .catch(function (error) {
-        console.log(error);
-      })
-  }
-  // List() {
-  //   this.state.registrados.forEach(element => element.nombres);
-    // this.state.registrados.forEach(element => console.log(element.nombres));
-    // return this.state.registrados.map(function (currentTodo, i) {
-    //   return <li todo={currentTodo} key={i} />;
-    // })
-  // }
 
+    
 
+  }
+
+  
 
   onSubmit(e) {
     e.preventDefault();
-    if (this.state.nombres.length > 0 && this.state.apellido.length > 0 && this.state.email.length > 0 && this.state.contraseña.length > 0) {
+    if (this.state.nombres.length > 0 && this.state.apellido.length > 0 && this.state.email.length > 0 && this.state.contrasena.length > 0) {
 
       const newRegistros = {
         nombres: this.state.nombres,
         apellido: this.state.apellido,
         ciudad: this.state.ciudad,
         email: this.state.email,
-        contraseña: this.state.contraseña
+        contrasena: this.state.contrasena
       };
 
       console.log(newRegistros);
@@ -68,7 +60,7 @@ export default class Registro extends Component {
         apellido: '',
         ciudad: '',
         email: '',
-        contraseña: ''
+        contrasena: ''
       })
       console.log(`Form submitted:`);
     }
@@ -108,7 +100,7 @@ export default class Registro extends Component {
 
   handle_password(e) {
     this.setState({
-      contraseña: e.target.value
+      contrasena: e.target.value
 
     });
   }
@@ -126,7 +118,7 @@ export default class Registro extends Component {
   render() {
     return (
       <div className="d-sm-flex justify-content-center">
-        <form>
+        <form onSubmit={this.onSubmit}>
 
           <div className="form-group">
 
@@ -150,41 +142,19 @@ export default class Registro extends Component {
 
           <div className="form-group">
             <br />
-            <input onChange={this.handle_password} value={this.state.contraseña} type="password" className="form-control" placeholder="Contraseña" />
+            <input onChange={this.handle_password} value={this.state.contrasena} type="password" className="form-control" placeholder="Contraseña" />
           </div>
 
           <div className="form-group">
             <p></p>
-            <input type="submit" onClick={this.onSubmit} value="Guardar" className="btn btn-primary" />
-
+            <input type="submit" className="btn btn-primary" />
+<br />
 
           </div>
 
         </form>
 
-        <br /><br />
-        <table className="table table-striped" style={{ marginTop: 20 }} >
-          <thead>
-            <tr>
-              <th>ID</th>
-              <th>nombre</th>
-              <th>apellido</th>
-              <th>ciudad</th>
-              <th>email</th>
-              <th>contraseña</th>
-            </tr>
-          </thead>
-          {/* <tbody> */}
-          <ul>
-          {/* {this.state.registrados.map(task => {return <li key={this.state.registrados._id}>{task}</li>})} */}
-          </ul>
-         
-            
-          {/* </tbody> */}
-        </table>
-
-
-
+        
       </div>
 
     )

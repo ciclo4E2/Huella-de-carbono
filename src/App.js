@@ -18,7 +18,9 @@ import Servicios from '../src/componentes/servicios';
 import Calculadora from '../src/componentes/calculadora';
 import Noticias from '../src/componentes/noticias';
 import Registro from '../src/componentes/registro';
-import Ingreso from '../src/componentes/ingreso'
+import Ingreso from '../src/componentes/ingreso';
+import Listaregistrados from './componentes/listaRegistrados';
+import Editar from './componentes/editar';
 
 function App() {
   // const navigate = useNavigate();
@@ -31,8 +33,8 @@ function App() {
         <h2>Huella de carbono</h2>
         <div>
 
-          <Link to='/ingreso' type="button" class="btn btn-info btn-sm" id='ingreso'>Ingreso</Link>
-          <Link to='/registro' type="button" class="btn btn-info btn-sm" id='registro'>Registro</Link>
+          <Link to='/ingreso' type="button" className="btn btn-info btn-sm" id='ingreso'>Ingreso</Link>
+          <Link to='/registro' type="button" className="btn btn-info btn-sm" id='registro'>Registro</Link>
                     
         </div>
       </header>
@@ -55,6 +57,10 @@ function App() {
                 <Link to="/calculadora">Calculadora</Link>
               </li>
 
+              <li>
+                <Link to="/lista">Lista de usuarios</Link>
+              </li>
+
             </ul>
           </nav>
         </div>
@@ -66,11 +72,10 @@ function App() {
           <Route  path="/registro" element={<Registro/>} />
           <Route  path="/ingreso" element={<Ingreso/>} />
           <Route  path="/calculadora" element={<Calculadora/>} />
+          <Route  path="/lista" element={<Listaregistrados/>} />
+          <Route  path="/editar" element={<Editar/>} />
 
         </Routes>
-
-      
-
 
     </div>
     </Router>

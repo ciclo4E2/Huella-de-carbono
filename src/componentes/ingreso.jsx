@@ -66,6 +66,7 @@ export default class Ingreso extends Component {
             this.state.password===element2.contraseña? this.setState({ pass_encontrado: true }): console.log(element2.contraseña));
         if (this.state.pass_encontrado && this.state.user_encontrado) {
             console.log('usuario ingresado')
+            localStorage.setItem('user', 'Juan');
         }
     }
 
@@ -95,7 +96,7 @@ export default class Ingreso extends Component {
                         <input type="email" className="form-control" onChange={this.handle_usuario} usuario="usuario" aria-describedby="emailHelp" placeholder="Enter email" />
                         <small id="emailHelp" className="form-text text-muted">We'll never share your email with anyone else.</small>
                     </div>
-                    <div class="form-group">
+                    <div className="form-group">
                         <label>Password</label>
                         <input type="password" onChange={this.handle_password} password="password" className="form-control" placeholder="Password" />
                     </div>

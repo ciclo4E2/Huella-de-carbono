@@ -77,9 +77,9 @@ export default class Registro extends Component {
     render(){
       return (
         <div className ="d-sm-flex justify-content-center">
-            <form class="form-group">
-            <label class="my-1 mr-2" >Seleccione el tipo de transporte que usa</label>
-            <select class="custom-select my-1 mr-sm-2" onChange={this.handle_tipo_transporte} value={this.state.tipo_transporte} >
+            <form className="form-group">
+            <label className="my-1 mr-2" >Seleccione el tipo de transporte que usa</label>
+            <select className="custom-select my-1 mr-sm-2" onChange={this.handle_tipo_transporte} value={this.state.tipo_transporte} >
                 <option defaultValue>seleccione una opcion</option>
                 <option value="Camion">Camion</option>
                 <option value="bus">bus servico publico</option>
@@ -88,8 +88,8 @@ export default class Registro extends Component {
                 <option value="Bicicleta">Bicicleta - caminando</option>
             </select>
             <br />
-            <label class="my-1 mr-2" >Seleccione el rango de horas diarias de uso</label>
-            <select class="custom-select my-1 mr-sm-2" id="inlineFormCustomSelectPref2">
+            <label className="my-1 mr-2" >Seleccione el rango de horas diarias de uso</label>
+            <select className="custom-select my-1 mr-sm-2" id="inlineFormCustomSelectPref2">
                 <option defaultValue>seleccione una opcion</option>
                 <option value="menos de 1/2 hora">menos de 1/2 hora</option>
                 <option value="entre 1/2 - 1 hora">entre 1/2 - 1 hora</option>
@@ -98,12 +98,12 @@ export default class Registro extends Component {
                 
             </select>
 
-            <div class="custom-control custom-checkbox my-1 mr-sm-2">
-                <input type="checkbox" class="custom-control-input" id="customControlInline" />
-                <label class="custom-control-label" >Remember my preference</label>
+            <div className="custom-control custom-checkbox my-1 mr-sm-2">
+                <input type="checkbox" className="custom-control-input" id="customControlInline" />
+                <label className="custom-control-label" >Remember my preference</label>
             </div>
 
-            <button type="submit" class="btn btn-primary my-1">Submit</button>
+            <button type="submit" className="btn btn-primary my-1">Submit</button>
         </form>
 
         </div>
