@@ -1,28 +1,31 @@
-import logo from '../logo.svg';
+
+import logo1 from '../imagenes/images.jpg';
 import '../App.css';
 
 function Integrantes() {
     return (
         <div className="componente">
           <div>
-            <img src={logo} className="App-logo" alt="logo" />
-            <h4>Melanie Garcia </h4>
+          <img src={logo1} className="App-logo" alt="logo" />
+        <p>Melanie</p>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Asperiores, quas?</p>
+
           </div>
         
           <div>
-            <img src={logo} className="App-logo" alt="logo" />
-            <h4>Daniel Rivera</h4>
+          <img src={logo1} className="App-logo" alt="logo" />
+        <p>Yesid</p>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Asperiores, quas?</p>
+
           </div>
 
           <div>
-            <img src={logo} className="App-logo" alt="logo" />
-            <h4>Yuder Hernandez</h4>
+          <img src={logo1} className="App-logo" alt="logo" />
+        <p>Yuder</p>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Asperiores, quas?</p>
+
           </div>
 
-          <div>
-              <img src={logo} className="App-logo" alt="logo" />
-              <h4>Yesid Moreno</h4>
-          </div>
       </div>
     );
   }

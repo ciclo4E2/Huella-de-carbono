@@ -59,24 +59,23 @@ ul li {
   font-size:larger;
   color: white;
 }
-.btn{
-  background: transparent;
+.btns{
+  background:#0b5770;
   color: wheat;
   border: 2px solid #0b5770;
   border-radius: 6px;
   padding: 4px 8px;
   margin-left: 6px;
+  font-style: oblique;
+  
 }
-.btn:hover {
+.btns:hover {
   background-color: #008CBA;
   color: white;
 }
 
 
-.navegacion{
-  background:#ba5400;
-  color: rgb(14, 13, 12);
-}
+
 
 a{
   text-decoration: none;
