@@ -1,5 +1,5 @@
 
-import logo1 from '../imagenes/images.jpg';
+
 import melanieFoto from '../imagenes/melanie.png';
 import yesidFoto from '../imagenes/yesid.png';
 import yuderFoto from '../imagenes/yuder.png';
